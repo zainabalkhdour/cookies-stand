@@ -8,7 +8,7 @@ var Seattle = {
 
     location: 'Seattle',
     minCustomerHour: 23,
-    maxCustomerHour: 65,
+  maxCustomerHour: 65,
     averCookiesPerCustmoer: 6.3,
 
     randomSeaCustomers: function (minCustomerHour, maxCustomerHour) {
