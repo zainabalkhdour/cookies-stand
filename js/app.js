@@ -1,7 +1,7 @@
 'use strict';
 
 var SellingAreas = [];
-var workingHours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am', '1:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm', '8:00 pm'];
+var workingHours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am', '1:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm'];
 var tableElement = document.getElementById('sales-table');
 
 function Shop(location, minCustomerHour, maxCustomerHour, averCookiesPerCustomer) {//working
@@ -12,6 +12,7 @@ function Shop(location, minCustomerHour, maxCustomerHour, averCookiesPerCustomer
   this.cookiesPerHour = [];
   this.customersPerHour = [];
   this.dailyTotal = 0;
+  this.virticalTotal=[];
   SellingAreas.push(this);
 }
 
@@ -108,36 +109,35 @@ Shop.prototype.render = function () {
 function createFooterRaw() {
 
 
+
   var footerRawEL = document.createElement('tr');///raw 7
   tableElement.appendChild(footerRawEL);
   var data6 = document.createElement('td');// raw  7 data(header)
   footerRawEL.appendChild(data6);
   data6.textContent = 'total ';
-
+  var totalOfTotal = 0;
   for (var i = 0; i < workingHours.length; i++) {
-    var totalOfTotal = 0;
-    for (var l=0; l < Shop.length; l++) {
-      var virticalTotal=0;
-      virticalTotal += Shop[0].cookiesPerHour[l];
-      //   Shop.virticalTotal.push(virticalTotal);
+    var virticalTotal=0;
+    for (var l=0; l < SellingAreas.length; l++) {
+      virticalTotal += SellingAreas[0].cookiesPerHour[l];
       totalOfTotal +=virticalTotal;
 
     }
-
-    var data62 = document.createElement('td');//rest of data raw7
-    data6.appendChild(data62);
-    data62.textContent =virticalTotal;
-
+    data6 = document.createElement('td');// raw  7 data(header)
+    footerRawEL.appendChild(data6);
+    data6.textContent = virticalTotal;
   }
-  data62 = document.createElement('td');//rest of data raw7
-  data6.appendChild(data62);
-  data62.textContent =totalOfTotal;
+  data6 = document.createElement('td');// raw  7 data(header)
+  footerRawEL.appendChild(data6);
+  data6.textContent = totalOfTotal;
 }
 
 
 
 
 function rendertable() {
+
+
   createHeaderRaw();
 
   for (var i = 0; i < SellingAreas.length; i++) {
