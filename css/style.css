@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+ background-color:#EBAF5B;
+ font-size: 15pt;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+}
+#headerImg{
+    width: 175px;
+    height: 175px;
+}
+
+header{
+    background-color: black;
+    font-weight: bolder;
+    color: white;
+    font-size: x-large;
+    font-family:'Dancing Script', cursive;
+    width: 97%;
+    text-align: center;
+    padding: 13px;
+    position: relative;
+    left: 21px;
+}
+header h1 a{
+    cursor:default;
+    text-decoration: none;
+    color: white;
+}
+header h1 :hover{
+    text-shadow: 3px 2px 25px bisque;
+}
+
+header h2{
+    font-weight:normal ;
+    font-size: medium;
+}
+
+nav{
+    border: 2px solid whitesmoke;
+    padding: 4px;
+    background-color:#4452EB;
+   
+
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 4px;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    color: #436EEB;
+    background-color: rgb(209 142 132 / 92%);
+    left: 3px;
+    position: relative;
+    width: 258px;
+}
+nav ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: bisque
+}
+nav ul li a:hover{
+    color: #436EEB;
+
+}
+nav ul li:active{
+    border:2px solid rgba(155, 46, 46, 0.199);
+    border-top: 0px;
+    border-left: 0px;
+}
+
+nav ul li:hover{
+   box-shadow:5px 5px 15px honeydew;
+}
+
+#workingHours{
+    color: black;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline blue;
+    position: relative;
+    top: -13px;
+    left: -8px;
+    background-color: #fff8dced;
+
+}
+main{
+    background-color: #ffe4c4f2;
+    width: 82%;
+    position: relative;
+    left: 142px;
+    padding: 2%;
+    top: 52px;
+    background-image:url(/img/fish.jpg) ;
+}
+
+section{
+    background-color: #ffe4c4e3;
+    padding: 3%;
+    width: 69%;
+    position: relative;
+    left: 199px;
+    top: -6px;
+    text-align: justify;
+    border-radius: 72px;
+    
+}
+footer{
+    background-color: black;
+    position: relative;
+    z-index: 10pt;
+}
+footer span{
+    display: block;
+    height: 100px;
+    color: whitesmoke;
+    font-size: medium;
+    text-decoration: underline;
+    text-align: center;
+    padding: 33px;
+}
+
+/*
+sales css
+*/
+
+#sectionConTable{
+    overflow: auto;
+}
+
+table{
+    border:1px solid #436EEB;
+    position: relative;
+    left: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: scroll;
+}
+tr{
+    border:1px solid #436EEB;
+    text-align: right;
+    color: navy;
+   
+}
+tr th{
+    border:1px solid #436EEB;
+    text-align: center;
+    color: #EBB938;
+    text-decoration: underline;
+    width: 91px;
+    padding: 16px; 
+    border-radius: 8px;
+    background-color: #062C9E;
+}
+tr td{
+    border:1px solid #436EEB;
+    text-align: left;
+    color: #062C9E;
+    text-decoration: none;
+    width: 91px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+   * {
+    scrollbar-width: thin;
+    scrollbar-color:#173F78 #173F78;
+  }
+  
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #d6d9dd48;
+     border-radius: 6px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #173F78;
+    border-radius: 20px;
+    border: 3px solid #173F78;
+   
+  }
