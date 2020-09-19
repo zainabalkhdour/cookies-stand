@@ -129,16 +129,11 @@ footer span{
 sales css
 */
 
-#sectionConTable{
-    overflow: auto;
-}
-
 table{
     border:1px solid #436EEB;
     position: relative;
     left: 17px;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: scroll;
 }
 tr{
     border:1px solid #436EEB;
@@ -166,25 +161,3 @@ tr td{
     border-radius: 8px;
     background-color: white;
 }
-
-/* The emerging W3C standard
-   that is currently Firefox-only */
-   * {
-    scrollbar-width: thin;
-    scrollbar-color:#173F78 #173F78;
-  }
-  
-  /* Works on Chrome/Edge/Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
-  *::-webkit-scrollbar-track {
-    background: #d6d9dd48;
-     border-radius: 6px;
-  }
-  *::-webkit-scrollbar-thumb {
-    background-color: #173F78;
-    border-radius: 20px;
-    border: 3px solid #173F78;
-   
-  }

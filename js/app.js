@@ -146,4 +146,5 @@ function rendertable() {
   }
   createFooterRaw();
 }
+
 rendertable();
