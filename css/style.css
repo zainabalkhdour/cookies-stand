@@ -96,7 +96,7 @@ main{
     left: 142px;
     padding: 2%;
     top: 52px;
-    background-image:url(/img/fish.jpg) ;
+    background-image:url(./img/fish.jpg) ;
 }
 
 section{

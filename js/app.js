@@ -115,13 +115,14 @@ function createFooterRaw() {
   var data6 = document.createElement('td');// raw  7 data(header)
   footerRawEL.appendChild(data6);
   data6.textContent = 'total ';
+
+  var virticalTotal=0;
   var totalOfTotal = 0;
+
   for (var i = 0; i < workingHours.length; i++) {
-    var virticalTotal=0;
     for (var l=0; l < SellingAreas.length; l++) {
       virticalTotal += SellingAreas[0].cookiesPerHour[l];
       totalOfTotal +=virticalTotal;
-
     }
     data6 = document.createElement('td');// raw  7 data(header)
     footerRawEL.appendChild(data6);
@@ -130,6 +131,7 @@ function createFooterRaw() {
   data6 = document.createElement('td');// raw  7 data(header)
   footerRawEL.appendChild(data6);
   data6.textContent = totalOfTotal;
+
 }
 
 
