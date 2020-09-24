@@ -96,7 +96,7 @@ main{
     left: 142px;
     padding: 2%;
     top: 52px;
-    background-image:url(./img/fish.jpg) ;
+    background-image:url(../img/fish.jpg) ;
 }
 
 section{
@@ -134,6 +134,7 @@ table{
     position: relative;
     left: 17px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
 tr{
     border:1px solid #436EEB;
@@ -160,4 +161,16 @@ tr td{
     padding: 8px;
     border-radius: 8px;
     background-color: white;
+}
+fieldset{
+    
+    width: min-content;
+    position: relative;
+    top: 12px;
+    left: 414px;
+
+}
+#style-section{
+    width: fit-content;
+    position: revert;
 }

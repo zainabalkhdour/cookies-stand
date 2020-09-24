@@ -27,9 +27,22 @@
 
     <main >
         <span id="workingHours" >Working Hours : 6:00am - 8:00pm</span>
-        <section >
-            <table id=sales-table ></table>
-           
+        <section id="style-section" >
+            <table id="sales-table"></table>
+           <fieldset>
+               <forms id="raw-table">
+                   <legend>add new store :</legend>
+                 <label for="store">newSellingStore</label>
+                 <input type="text" id="store" placeholder="name of store location">
+                 <label for="minCustomerHour">minCustomerHour</label>
+                 <input type="text" id="minCustomerHour" placeholder="ex: 24">
+                 <label for="maxCustomerHour">maxCustomerHour</label>
+                 <input type="text" id="maxCustomerHour" placeholder="ex: 54">
+                 <label for="averCookiesPerCustomer">averCookiesPerCustomer</label>
+                 <input type="text" id="averCookiesPerCustomer" placeholder="ex: 2">
+                 <input type="submit" >
+               </form>
+           </fieldset>
         </section>
 
     </main>
