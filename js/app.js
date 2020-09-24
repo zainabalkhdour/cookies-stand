@@ -1,5 +1,4 @@
 'use strict';
-
 var SellingAreas = [];
 var workingHours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am', '1:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm'];
 var tableElement = document.getElementById('sales-table');
@@ -134,6 +133,51 @@ function createFooterRaw() {
 
 }
 
+{/* <label for="store">new selling store</label>
+<input type="text" id="store" placeholder="name of store location">
+<label for="minCustomerHour">minCustomerHour</label>
+<input type="text" id="minCustomerHour" placeholder="ex: 24">
+<label for="maxCustomerHour">maxCustomerHour</label>
+<input type="text" id="maxCustomerHour" placeholder="ex: 54">
+<label for="averCookiesPerCustomer">averCookiesPerCustomer</label>
+<input type="text" id="averCookiesPerCustomer" placeholder="ex: 2">
+<input type="submit" id="submit-button" value="submit"></input> */}
+
+
+var form=document.getElementById('raw-table');
+form.addEventListener('submit',submitHandler);
+function submitHandler(event){
+  
+  Shop.calcCookiesPerHour();
+  event.preventDefault();
+  new Shop (location,minCustomerHour,maxCustomerHour,averCookiesPerCustomer);
+  let location=event.target.location.value;
+  let minCustomerHour =event.target.minCustomerHour.value;
+  let maxCustomerHour =event.target.maxCustomerHour.value;
+  let averCookiesPerCustomer =event.target.averCookiesPerCustomer.value;
+
+  var tr2EL = document.createElement('tr');//raw 2
+  tableElement.appendChild(tr2EL);
+  var data1 = document.createElement('td');//data raw 2
+  tr2EL.appendChild(data1);
+  data1.textContent = Shop.location;
+  for (var t = 0; t < Shop.cookiesPerHour.length; t++) {
+    var data12 = document.createElement('td');
+    tr2EL.appendChild(data12);
+    data12.textContent = Shop.cookiesPerHour[t];
+
+  }
+  data1 = document.createElement('td');//data raw 2
+  tr2EL.appendChild(data1);
+  data1.textContent = Shop.dailyTotal;
+
+  }
+
+ 
+
+
+
+
 
 
 
@@ -144,9 +188,10 @@ function rendertable() {
 
   for (var i = 0; i < SellingAreas.length; i++) {
     SellingAreas[i].render();
-
+    
   }
   createFooterRaw();
+  submitHandler();
 }
 
 rendertable();
